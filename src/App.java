@@ -4,10 +4,11 @@ public class App {
         app.encrypt("abcd", "2");
     }
 
-    private void encrypt(String text, String key) {
+    private String encrypt(String text, String key) {
         for (char chr : text.toCharArray()) {
-            
+            chr += Integer.parseInt(key);
+            System.out.print(chr);
         }
-        System.out.println(text + key);
+        return null;
     }
 }
